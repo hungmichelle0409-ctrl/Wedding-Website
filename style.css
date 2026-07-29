@@ -1,0 +1,1694 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Noto Serif TC",serif;
+    color:#4f4f4f;
+    background:#ffffff;
+    line-height:1.8;
+    overflow-x:hidden;
+
+}
+
+img{
+
+    width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+section{
+
+    width:100%;
+    padding:120px 8%;
+
+}
+
+
+/* ===========================
+   共用
+=========================== */
+
+.section-tag{
+
+    font-size:13px;
+    letter-spacing:4px;
+    color:#a59d92;
+    display:block;
+    margin-bottom:24px;
+
+}
+
+h1{
+
+    font-size:64px;
+    font-weight:500;
+    line-height:1.3;
+
+}
+
+h2{
+
+    font-size:42px;
+    font-weight:500;
+    line-height:1.5;
+
+}
+
+p{
+
+    font-size:18px;
+    color:#666;
+    margin-top:18px;
+
+}
+
+.love{
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:20px;
+    font-style:italic;
+    color:#9c8b74;
+
+}
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    position:relative;
+    width:100%;
+    height:100vh;
+    min-height:780px;
+    overflow:hidden;
+    background:#000;
+
+}
+
+/* ===========================
+   背景圖片
+=========================== */
+
+.hero-bg{
+
+    position:absolute;
+    inset:0;
+    z-index:1;
+
+}
+
+.hero-bg img{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    display:block;
+
+}
+
+/* 桌機照片 */
+
+.hero-bg .desktop{
+
+    display:block;
+    object-position:center center;
+
+}
+
+/* 手機照片 */
+
+.hero-bg .mobile{
+
+    display:none;
+    object-position:center center;
+
+}
+
+/* ===========================
+   漸層
+=========================== */
+
+.hero-overlay{
+
+    position:absolute;
+    inset:0;
+    z-index:2;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,.08),
+        rgba(0,0,0,.20),
+        rgba(0,0,0,.42)
+    );
+
+}
+
+/* ===========================
+   文字
+=========================== */
+
+.hero-content{
+
+    position:absolute;
+
+    left:8%;
+
+    bottom:11%;
+
+    z-index:3;
+
+    max-width:650px;
+
+}
+
+.hero-date{
+
+    opacity:1;
+
+    margin-bottom:36px;
+
+    color:#E6D3AE;
+
+    font-size:18px;
+
+    letter-spacing:8px;
+
+}
+
+.hero-title{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    margin:0;
+
+}
+
+.hero-title span{
+
+    display:block;
+
+    opacity:1;
+
+    transform:translateY(35px);
+
+    color:#fff;
+
+    font-size:84px;
+
+    font-weight:400;
+
+    line-height:1.18;
+
+    text-shadow:
+        0 6px 18px rgba(0,0,0,.35);
+
+}
+
+.hero-couple{
+
+    opacity:1;
+
+    margin-top:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:26px;
+
+    color:#fff;
+
+    font-size:26px;
+
+    letter-spacing:6px;
+
+}
+
+.hero-couple em{
+
+    font-style:normal;
+
+    color:#E6D3AE;
+
+}
+
+.hero-love{
+
+    opacity:1;
+
+    margin-top:34px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:28px;
+
+    font-style:italic;
+
+    color:#E6D3AE;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:900px){
+
+.hero{
+
+    min-height:100vh;
+
+}
+
+.hero-bg .desktop{
+
+    display:none;
+
+}
+
+.hero-bg .mobile{
+
+    display:block;
+
+}
+
+.hero-content{
+
+    left:28px;
+    right:28px;
+
+    top:70px;
+    bottom:auto;
+
+    max-width:320px;
+
+}
+
+.hero-date{
+
+    font-size:14px;
+
+    letter-spacing:4px;
+
+    margin-bottom:18px;
+
+}
+
+.hero-title span{
+
+    font-size:48px;
+
+    line-height:1.22;
+
+}
+
+.hero-couple{
+
+    margin-top:64px;
+
+    font-size:20px;
+
+    gap:16px;
+
+}
+
+.hero-love{
+
+    margin-top:36px;
+
+    font-size:16px;
+
+}
+
+}
+
+/* ===========================
+   動畫
+=========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   OPENING
+=========================== */
+
+.opening{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    min-height:820px;
+
+    overflow:hidden;
+
+}
+
+/* 背景 */
+
+.opening-bg{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+.opening-bg img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+}
+
+/* 漸層 */
+
+.opening-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.10),
+        rgba(0,0,0,.05) 35%,
+        rgba(0,0,0,.25) 100%
+    );
+
+}
+
+/* 文字 */
+
+.opening-content{
+
+    position:absolute;
+
+    top:12%;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:min(760px,90%);
+
+    text-align:center;
+
+    z-index:2;
+
+}
+
+/* OUR INVITATION */
+
+.opening-tag{
+
+    color:#E7D4AE;
+
+    font-size:15px;
+
+    letter-spacing:6px;
+
+    margin-bottom:22px;
+
+}
+
+.opening-tag::after{
+
+    content:"";
+
+    display:block;
+
+    width:60px;
+
+    height:1px;
+
+    background:#E7D4AE;
+
+    margin:14px auto 0;
+
+}
+
+/* 小標 */
+
+.opening-subtitle{
+
+    color:#fff;
+
+    font-size:30px;
+
+    font-weight:400;
+
+    letter-spacing:2px;
+
+    white-space:nowrap;
+
+    text-shadow:0 3px 10px rgba(0,0,0,.35);
+
+}
+
+/* 主標 */
+
+.opening-title{
+
+    margin-top:18px;
+
+    color:#E7D4AE;
+
+    font-size:72px;
+
+    font-weight:400;
+
+    line-height:1.2;
+
+    text-shadow:0 5px 16px rgba(0,0,0,.35);
+
+    opacity:1;important;
+
+    transform:translateY(24px);
+
+}
+
+/* ===========================
+   手機
+=========================== */
+
+@media (max-width:900px){
+
+.opening{
+
+    height:82vh;
+
+    min-height:700px;
+
+}
+
+.opening-bg img{
+
+    object-position:center;
+
+}
+
+.opening-content{
+
+    top:10%;
+
+    width:calc(100% - 40px);
+
+}
+
+.opening-tag{
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    margin-bottom:18px;
+
+}
+
+.opening-tag::after{
+
+    width:50px;
+
+    margin-top:12px;
+
+}
+
+.opening-subtitle{
+
+    font-size:18px;
+
+    white-space:nowrap;
+
+}
+
+.opening-title{
+
+    margin-top:12px;
+
+    font-size:42px;
+
+}
+
+}
+
+/* ===========================
+   STORY
+=========================== */
+
+.story{
+
+    display:grid;
+    grid-template-columns:46% 54%;
+    min-height:900px;
+
+    background:#F8F5F0;
+    overflow:hidden;
+
+}
+
+/* 左邊文字 */
+
+.story-content{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:0 6vw;
+
+}
+
+.story .section-tag{
+
+    font-size:17px;
+    letter-spacing:6px;
+    color:#B08D69;
+
+    margin-bottom:18px;
+
+}
+
+.story .section-tag::after{
+
+    content:"";
+
+    display:block;
+
+    width:70px;
+    height:1px;
+
+    margin-top:16px;
+
+    background:#B08D69;
+
+}
+
+.story h2{
+
+    font-size:72px;
+    line-height:1.4;
+    font-weight:400;
+
+    color:#2F2F2F;
+
+    margin:50px 0;
+
+}
+
+.story p{
+
+    font-size:30px;
+    line-height:2;
+
+    color:#555;
+
+    margin-bottom:28px;
+
+}
+
+.story-love{
+
+    margin-top:60px;
+
+    font-size:42px;
+
+    color:#B08D69;
+
+    font-style:italic;
+
+}
+
+/* 右邊照片 */
+
+.story-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.story-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:65% center;
+
+    transform:scale(1.08);
+
+}
+
+/* 桌機左側淡化 */
+
+.story-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:24%;
+    height:100%;
+
+    background:linear-gradient(
+        to right,
+        #F8F5F0,
+        rgba(248,245,240,.8),
+        transparent
+    );
+
+    z-index:2;
+
+}
+
+/* ===========================
+   手機
+=========================== */
+
+@media(max-width:900px){
+
+.story{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* 圖片 */
+
+.story-image{
+
+    order:-1;
+
+    height:42vh;
+
+}
+
+.story-image img{
+
+    object-fit:cover;
+
+    object-position:center 28%;
+
+    transform:scale(1.03);
+
+}
+
+/* 底部漸層 */
+
+.story-image::before{
+
+    width:100%;
+
+    height:18%;
+
+    left:0;
+
+    top:auto;
+
+    bottom:0;
+
+    background:linear-gradient(
+
+        to bottom,
+
+        transparent 0%,
+
+        rgba(248,245,240,.55) 60%,
+
+        #F8F5F0 100%
+
+    );
+
+}
+
+/* 文字 */
+
+.story-content{
+
+    padding:48px 32px 60px;
+
+}
+
+.story .section-tag{
+
+    font-size:14px;
+
+    letter-spacing:4px;
+
+}
+
+.story h2{
+
+    font-size:42px;
+
+    line-height:1.45;
+
+    margin:28px 0;
+
+}
+
+.story p{
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+}
+
+.story-love{
+
+    margin-top:36px;
+
+    font-size:28px;
+
+}
+
+}
+
+/* ===========================
+   WEDDING DAY
+=========================== */
+
+.wedding-day{
+
+    background:#F7F3EC;
+
+    padding:90px 20px 110px;
+
+    text-align:center;
+
+}
+
+.section-tag{
+
+    font-size:15px;
+
+    letter-spacing:6px;
+
+    color:#B6976A;
+
+    margin-bottom:18px;
+
+}
+
+.wedding-date{
+
+    font-size:64px;
+
+    font-weight:500;
+
+    color:#2E2B28;
+
+    margin:0;
+
+    line-height:1.1;
+
+}
+
+.wedding-week{
+
+    margin-top:18px;
+
+    font-size:28px;
+
+    color:#8B8B8B;
+
+    letter-spacing:2px;
+
+}
+
+/* ===========================
+   Photo
+=========================== */
+
+.wedding-photo{
+
+    width:min(900px,100%);
+
+    margin:55px auto;
+
+}
+
+.wedding-photo img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:34px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.10);
+
+}
+
+/* ===========================
+   Timeline
+=========================== */
+
+.timeline{
+
+    max-width:720px;
+
+    margin:0 auto 60px;
+
+    text-align:left;
+
+}
+
+.timeline-item{
+
+    display:grid;
+
+    grid-template-columns:120px 40px 1fr;
+
+    align-items:flex-start;
+
+    padding:28px 0;
+
+}
+
+.timeline-item:not(:last-child){
+
+    border-bottom:1px dashed #DCCDB9;
+
+}
+
+.timeline-time{
+
+    font-size:40px;
+
+    color:#8C6D49;
+
+    font-weight:500;
+
+    text-align:right;
+
+    padding-right:25px;
+
+}
+
+.timeline-line{
+
+    position:relative;
+
+    width:1px;
+
+    background:#C8AE8A;
+
+    height:100%;
+
+    justify-self:center;
+
+}
+
+.timeline-line::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:12px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#C8AE8A;
+
+}
+
+.timeline-content{
+
+    padding-left:28px;
+
+}
+
+.timeline-content h3{
+
+    margin:0 0 8px;
+
+    font-size:30px;
+
+    color:#2F2F2F;
+
+    font-weight:500;
+
+}
+
+.timeline-content p{
+
+    margin:0;
+
+    font-size:20px;
+
+    color:#888;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+   Venue
+=========================== */
+
+.venue-card{
+
+    max-width:880px;
+
+    margin:0 auto;
+
+    background:#fff;
+
+    border-radius:30px;
+
+    padding:45px 40px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.venue-name{
+
+    font-size:38px;
+
+    color:#2F2F2F;
+
+    font-weight:500;
+
+}
+
+.venue-address{
+
+    margin-top:18px;
+
+    font-size:22px;
+
+    color:#7A7A7A;
+
+    line-height:1.8;
+
+}
+
+.map-btn{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:16px 44px;
+
+    border:2px solid #C9A97D;
+
+    border-radius:999px;
+
+    color:#A98256;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.map-btn:hover{
+
+    background:#C9A97D;
+
+    color:#fff;
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:768px){
+
+.wedding-day{
+
+    padding:70px 22px 90px;
+
+}
+
+.section-tag{
+
+    font-size:12px;
+
+    letter-spacing:5px;
+
+}
+
+.wedding-date{
+
+    font-size:52px;
+
+}
+
+.wedding-week{
+
+    font-size:20px;
+
+    margin-top:14px;
+
+}
+
+.wedding-photo{
+
+    margin:38px auto 45px;
+
+}
+
+.wedding-photo img{
+
+    border-radius:24px;
+
+}
+
+.timeline{
+
+    margin-bottom:45px;
+
+}
+
+.timeline-item{
+
+    grid-template-columns:75px 24px 1fr;
+
+    padding:22px 0;
+
+}
+
+.timeline-time{
+
+    font-size:28px;
+
+    padding-right:12px;
+
+}
+
+.timeline-line::before{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+.timeline-content{
+
+    padding-left:18px;
+
+}
+
+.timeline-content h3{
+
+    font-size:24px;
+
+}
+
+.timeline-content p{
+
+    font-size:16px;
+
+    line-height:1.7;
+
+}
+
+.venue-card{
+
+    padding:30px 24px;
+
+    border-radius:24px;
+
+}
+
+.venue-name{
+
+    font-size:28px;
+
+}
+
+.venue-address{
+
+    font-size:18px;
+
+}
+
+.map-btn{
+
+    margin-top:24px;
+
+    font-size:17px;
+
+    padding:14px 30px;
+
+}
+
+}
+
+
+/* ===========================
+   COUNTDOWN + RSVP
+=========================== */
+
+.countdown{
+
+    background:#F7F3EC;
+
+    padding:100px 20px;
+
+    text-align:center;
+
+}
+
+.countdown-divider{
+
+    width:70px;
+
+    height:1px;
+
+    background:#C9A97D;
+
+    margin:0 auto 18px;
+
+}
+
+.countdown-tag{
+
+    font-size:15px;
+
+    letter-spacing:6px;
+
+    color:#B6976A;
+
+}
+
+.countdown-text{
+
+    margin-top:28px;
+
+    font-size:24px;
+
+    color:#777777;
+
+}
+
+.countdown-days{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    gap:14px;
+
+    margin:12px 0 50px;
+
+}
+
+.countdown-days #days{
+
+    font-size:88px;
+
+    font-weight:500;
+
+    line-height:1;
+
+    color:#2E2B28;
+
+}
+
+.days-text{
+
+    font-size:22px;
+
+    letter-spacing:4px;
+
+    color:#A7865B;
+
+    padding-bottom:10px;
+
+}
+
+.rsvp-photo{
+
+    width:min(900px,100%);
+
+    margin:0 auto 40px;
+
+}
+
+.rsvp-photo img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:30px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.10);
+
+}
+
+.rsvp-note{
+
+    font-size:17px;
+
+    color:#777777;
+
+    line-height:1.8;
+
+    margin-bottom:34px;
+
+}
+
+.rsvp-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:280px;
+
+    height:62px;
+
+    padding:0 42px;
+
+    border-radius:999px;
+
+    background:#C8A57C;
+
+    color:#FFFFFF;
+
+    text-decoration:none;
+
+    font-size:22px;
+
+    font-weight:500;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
+
+}
+
+.rsvp-btn:hover{
+
+    background:#B48E63;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 14px 28px rgba(0,0,0,.15);
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:768px){
+
+.countdown{
+
+    padding:80px 22px;
+
+}
+
+.countdown-divider{
+
+    width:56px;
+
+    margin-bottom:16px;
+
+}
+
+.countdown-tag{
+
+    font-size:12px;
+
+    letter-spacing:5px;
+
+}
+
+.countdown-text{
+
+    margin-top:24px;
+
+    font-size:20px;
+
+}
+
+.countdown-days{
+
+    gap:10px;
+
+    margin:10px 0 40px;
+
+}
+
+.countdown-days #days{
+
+    font-size:64px;
+
+}
+
+.days-text{
+
+    font-size:16px;
+
+    letter-spacing:3px;
+
+    padding-bottom:8px;
+
+}
+
+.rsvp-photo{
+
+    margin:0 auto 30px;
+
+}
+
+.rsvp-photo img{
+
+    border-radius:22px;
+
+}
+
+.rsvp-note{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin-bottom:28px;
+
+}
+
+.rsvp-btn{
+
+    width:100%;
+
+    max-width:300px;
+
+    min-width:auto;
+
+    height:58px;
+
+    padding:0;
+
+    font-size:20px;
+
+}
+
+}
+
+/* ===========================
+   THANK YOU
+=========================== */
+
+.thankyou{
+
+    background:#F7F3EC;
+
+    padding:90px 20px 0;
+
+    text-align:center;
+
+}
+
+.thankyou-divider{
+
+    width:70px;
+
+    height:1px;
+
+    background:#C9A97D;
+
+    margin:0 auto 18px;
+
+}
+
+.thankyou-tag{
+
+    font-size:15px;
+
+    letter-spacing:6px;
+
+    color:#B6976A;
+
+}
+
+.thankyou-text{
+
+    margin:42px 0 45px;
+
+}
+
+.thankyou-text p{
+
+    margin:0;
+
+    color:#555;
+
+    line-height:1.9;
+
+}
+
+.thankyou-text p:first-child{
+
+    font-size:28px;
+
+    font-weight:500;
+
+    margin-bottom:12px;
+
+}
+
+.thankyou-text p:last-child{
+
+    font-size:22px;
+
+    color:#7A7A7A;
+
+}
+
+.thankyou-photo{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.thankyou-photo img{
+
+    display:block;
+
+    width:100%;
+
+    max-width:500px;
+
+    height:auto;
+
+}
+@media (max-width:768px){
+
+.thankyou{
+
+    padding:70px 20px 0;
+
+}
+
+.thankyou-divider{
+
+    width:56px;
+
+}
+
+.thankyou-tag{
+
+    font-size:12px;
+
+    letter-spacing:5px;
+
+}
+
+.thankyou-text{
+
+    margin:34px 0 36px;
+
+}
+
+.thankyou-text p:first-child{
+
+    font-size:24px;
+
+}
+
+.thankyou-text p:last-child{
+
+    font-size:18px;
+
+}
+
+.thankyou-photo img{
+
+    max-width:88%;
+
+}
+
+}
+/* ===========================
+   MUSIC
+=========================== */
+
+.music-btn{
+
+    position:fixed;
+
+    top:24px;
+
+    right:28px;
+
+    z-index:9999;
+
+    background:none;
+
+    border:none;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    color:#C8A57C;
+
+    transition:.3s;
+
+    user-select:none;
+
+}
+
+.music-btn:hover{
+
+    transform:scale(1.12);
+
+    color:#B48E63;
+
+}
+
+.music-btn.pause{
+
+    opacity:.45;
+
+}
+
+.music-btn.playing{
+
+    animation:musicRotate 6s linear infinite;
+
+}
+
+@keyframes musicRotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+.music-btn{
+
+    top:18px;
+
+    right:18px;
+
+    font-size:26px;
+
+}
+
+}
