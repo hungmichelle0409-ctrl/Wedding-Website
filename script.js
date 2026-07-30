@@ -101,36 +101,16 @@ function scrollNext() {
 
 window.addEventListener("load", () => {
 
-    const hero = document.querySelector(".hero");
+    const heroItems = document.querySelectorAll(".hero-fade");
 
-    if (!hero) return;
+    heroItems.forEach((item, index) => {
 
-    const date = hero.querySelector(".hero-date");
-    const line1 = hero.querySelector(".line1");
-    const line2 = hero.querySelector(".line2");
-    const couple = hero.querySelector(".hero-couple");
-    const love = hero.querySelector(".hero-love");
+        item.style.animation = `fadeUp .9s ease forwards`;
+        item.style.animationDelay = `${index * 0.6}s`;
 
-    fade(date, 0);
-    fade(line1, 600);
-    fade(line2, 1200);
-    fade(couple, 1800);
-    fade(love, 2400);
+    });
 
 });
-
-
-function fade(el, delay){
-
-    if(!el) return;
-
-    setTimeout(()=>{
-
-        el.style.animation="fadeUp .9s ease forwards";
-
-    },delay);
-
-}
 
 // ==========================
 // Opening Animation
