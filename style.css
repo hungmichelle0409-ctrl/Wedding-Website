@@ -94,107 +94,74 @@ p{
 =========================== */
 
 .hero{
-
     position:relative;
     width:100%;
     height:100vh;
-    min-height:780px;
+    min-height:760px;
     overflow:hidden;
     background:#000;
-
 }
 
-/* ===========================
-   背景圖片
-=========================== */
-
 .hero-bg{
-
     position:absolute;
     inset:0;
     z-index:1;
-
 }
 
 .hero-bg img{
-
     position:absolute;
     inset:0;
-
     width:100%;
     height:100%;
-
     object-fit:cover;
     display:block;
-
 }
-
-/* 桌機照片 */
 
 .hero-bg .desktop{
-
     display:block;
     object-position:center center;
-
 }
-
-/* 手機照片 */
 
 .hero-bg .mobile{
-
     display:none;
     object-position:center center;
-
 }
 
-/* ===========================
-   漸層
-=========================== */
-
 .hero-overlay{
-
     position:absolute;
     inset:0;
     z-index:2;
-
-    background:
-    linear-gradient(
+    background:linear-gradient(
         to bottom,
         rgba(0,0,0,.08),
-        rgba(0,0,0,.20),
-        rgba(0,0,0,.42)
+        rgba(0,0,0,.18),
+        rgba(0,0,0,.45)
     );
-
 }
 
-/* ===========================
-   文字
-=========================== */
-
 .hero-content{
-
     position:absolute;
-
     left:8%;
-
-    bottom:11%;
-
+    bottom:10%;
     z-index:3;
+    max-width:680px;
+}
 
-    max-width:650px;
+.hero-date,
+.hero-title span,
+.hero-couple,
+.hero-love{
+
+    opacity:0;
+    transform:translateY(35px);
 
 }
 
 .hero-date{
 
-    opacity:1;
-
-    margin-bottom:36px;
-
+    margin-bottom:32px;
     color:#E6D3AE;
-
     font-size:18px;
-
     letter-spacing:8px;
 
 }
@@ -202,53 +169,35 @@ p{
 .hero-title{
 
     display:flex;
-
     flex-direction:column;
-
     gap:8px;
-
-    margin:0;
 
 }
 
 .hero-title span{
 
     display:block;
-
-    opacity:1;
-
-    transform:translateY(35px);
-
     color:#fff;
-
     font-size:84px;
-
     font-weight:400;
-
     line-height:1.18;
-
-    text-shadow:
-        0 6px 18px rgba(0,0,0,.35);
+    text-shadow:0 8px 18px rgba(0,0,0,.35);
 
 }
 
 .hero-couple{
 
-    opacity:1;
-
-    margin-top:60px;
-
     display:flex;
-
     align-items:center;
+    gap:22px;
 
-    gap:26px;
+    margin-top:56px;
 
     color:#fff;
 
     font-size:26px;
 
-    letter-spacing:6px;
+    letter-spacing:5px;
 
 }
 
@@ -262,9 +211,9 @@ p{
 
 .hero-love{
 
-    opacity:1;
+    margin-top:28px;
 
-    margin-top:34px;
+    color:#E6D3AE;
 
     font-family:"Cormorant Garamond",serif;
 
@@ -272,13 +221,73 @@ p{
 
     font-style:italic;
 
-    color:#E6D3AE;
+}
+
+.scroll-indicator{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:28px;
+
+    transform:translateX(-50%);
+
+    z-index:5;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    color:#ffffff;
+
+    opacity:.75;
+
+    animation:scrollFloat 2.5s infinite;
 
 }
 
-/* ===========================
-   MOBILE
-=========================== */
+.scroll-indicator span{
+
+    width:1px;
+
+    height:42px;
+
+    background:#ffffff;
+
+    margin-bottom:12px;
+
+}
+
+.scroll-indicator p{
+
+    margin:0;
+
+    font-size:11px;
+
+    color:#ffffff;
+
+    letter-spacing:4px;
+
+}
+
+@keyframes scrollFloat{
+
+    0%{
+        transform:translate(-50%,0);
+    }
+
+    50%{
+        transform:translate(-50%,10px);
+    }
+
+    100%{
+        transform:translate(-50%,0);
+    }
+
+}
 
 @media (max-width:900px){
 
@@ -302,13 +311,15 @@ p{
 
 .hero-content{
 
-    left:28px;
-    right:28px;
+    left:30px;
 
-    top:70px;
+    right:30px;
+
+    top:72px;
+
     bottom:auto;
 
-    max-width:320px;
+    max-width:380px;
 
 }
 
@@ -324,35 +335,37 @@ p{
 
 .hero-title span{
 
-    font-size:48px;
+    font-size:42px;
 
-    line-height:1.22;
+    line-height:1.25;
 
 }
 
 .hero-couple{
 
-    margin-top:64px;
-
-    font-size:20px;
+    margin-top:48px;
 
     gap:16px;
+
+    font-size:20px;
 
 }
 
 .hero-love{
 
-    margin-top:36px;
+    margin-top:28px;
 
-    font-size:16px;
+    font-size:18px;
+
+}
+
+.scroll-indicator{
+
+    bottom:20px;
 
 }
 
 }
-
-/* ===========================
-   動畫
-=========================== */
 
 @keyframes fadeUp{
 
