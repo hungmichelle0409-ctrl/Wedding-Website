@@ -105,8 +105,8 @@ window.addEventListener("load", () => {
 
     heroItems.forEach((item, index) => {
 
-        item.style.animation = `fadeUp .9s ease forwards`;
-        item.style.animationDelay = `${index * 0.6}s`;
+        item.style.animation = "fadeUp 2.4s ease-out forwards";
+        item.style.animationDelay = `${0.4 + index * 0.3}s`;
 
     });
 

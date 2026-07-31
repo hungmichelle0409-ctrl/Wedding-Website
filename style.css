@@ -89,6 +89,7 @@ p{
     color:#9c8b74;
 
 }
+
 /* ===========================
    HERO
 =========================== */
@@ -153,7 +154,7 @@ p{
 .hero-love{
 
     opacity:0;
-    transform:translateY(35px);
+    transform:translateY(8px);
 
 }
 
@@ -367,22 +368,16 @@ p{
 
 }
 
-@keyframes fadeUp{
+@keyframes fadeUp {
 
-    from{
-
-        opacity:0;
-
-        transform:translateY(35px);
-
+    from {
+        opacity: 0;
+        transform: translateY(8px);
     }
 
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 
 }
