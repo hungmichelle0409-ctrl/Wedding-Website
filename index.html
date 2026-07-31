@@ -31,17 +31,23 @@
 
     <div class="hero-bg">
 
-        <!-- 桌機 -->
+        <!-- Desktop Cover -->
         <img
             src="images/cover-desktop.jpg"
             class="desktop"
-            alt="Wedding Cover">
+            alt="Wedding Cover"
+            fetchpriority="high"
+            loading="eager"
+            decoding="async">
 
-        <!-- 手機 -->
+        <!-- Mobile Cover -->
         <img
             src="images/cover-mobile.jpg"
             class="mobile"
-            alt="Wedding Cover">
+            alt="Wedding Cover"
+            fetchpriority="high"
+            loading="eager"
+            decoding="async">
 
     </div>
 
@@ -49,23 +55,23 @@
 
     <div class="hero-content">
 
-        <div class="hero-date">
+        <div class="hero-date hero-fade">
             2026.10.11（日）
         </div>
 
         <h1 class="hero-title">
 
-            <span class="line1">
+            <span class="line1 hero-fade">
                 久違的相聚
             </span>
 
-            <span class="line2">
+            <span class="line2 hero-fade">
                 剛好是婚禮
             </span>
 
         </h1>
 
-        <div class="hero-couple">
+        <div class="hero-couple hero-fade">
 
             <span>顏維</span>
 
@@ -75,11 +81,19 @@
 
         </div>
 
-        <div class="hero-love">
+        <div class="hero-love hero-fade">
 
             Love, Gathered.
 
         </div>
+
+    </div>
+
+    <div class="scroll-indicator">
+
+        <span></span>
+
+        <p>SCROLL</p>
 
     </div>
 
