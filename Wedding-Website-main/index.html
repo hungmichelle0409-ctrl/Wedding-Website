@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>久違的相聚，剛好是婚禮</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop preload="auto">
+    <source src="music/background.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Music Button -->
+<button id="musicBtn" class="music-btn" aria-label="背景音樂">
+    🎵
+</button>
+
+<body>
+
+<header class="hero">
+
+    <div class="hero-bg">
+
+        <!-- 桌機 -->
+        <img
+            src="images/cover-desktop.jpg"
+            class="desktop"
+            alt="Wedding Cover">
+
+        <!-- 手機 -->
+        <img
+            src="images/cover-mobile.jpg"
+            class="mobile"
+            alt="Wedding Cover">
+
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-date">
+            2026.10.11（日）
+        </div>
+
+        <h1 class="hero-title">
+
+            <span class="line1">
+                久違的相聚
+            </span>
+
+            <span class="line2">
+                剛好是婚禮
+            </span>
+
+        </h1>
+
+        <div class="hero-couple">
+
+            <span>顏維</span>
+
+            <em>&</em>
+
+            <span>韻淳</span>
+
+        </div>
+
+        <div class="hero-love">
+
+            Love, Gathered.
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<section class="opening">
+
+    <div class="opening-bg">
+
+        <img
+            src="images/opening.jpg"
+            alt="Wedding Opening">
+
+    </div>
+
+    <div class="opening-overlay"></div>
+
+    <div class="opening-content">
+
+    <div class="opening-tag">
+        OUR INVITATION
+    </div>
+
+    <div class="opening-subtitle">
+        邀請您共赴一場
+    </div>
+
+    <h2 class="opening-title">
+        幸福饗宴
+    </h2>
+
+</div>
+
+</section>
+
+<section class="story">
+
+    <div class="story-content">
+
+        <span class="section-tag">
+            OUR BEGINNING
+        </span>
+
+        <h2>
+            故事的開始，<br>
+            在故宮
+        </h2>
+
+        <p>
+            是我們第一次約會的地方，
+        </p>
+
+        <p>
+            多年後，我們回到這裡，
+            準備寫下新的篇章，
+        </p>
+
+        <p>
+            誠摯邀請您，
+            與我們一起分享人生的重要時刻。
+        </p>
+
+        <div class="story-love">
+            Love, Gathered.
+        </div>
+
+    </div>
+
+    <div class="story-image">
+
+        <img src="images/story.jpg"
+             alt="story">
+
+    </div>
+
+</section>
+
+
+<!-- ===========================
+     WEDDING DAY
+=========================== -->
+
+<section class="wedding-day">
+
+    <div class="section-tag">
+        WEDDING DAY
+    </div>
+
+    <h2 class="wedding-date">
+        2026.10.11
+    </h2>
+
+    <div class="wedding-week">
+        Sunday ・ 午宴
+    </div>
+
+    <!-- Photo -->
+    <div class="wedding-photo">
+
+        <img src="images/wedding-day.jpg"
+             alt="Wedding Photo">
+
+    </div>
+
+    <!-- Timeline -->
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-time">
+                11:30
+            </div>
+
+            <div class="timeline-line"></div>
+
+            <div class="timeline-content">
+
+                <h3>
+                    👋 賓客入席
+                </h3>
+
+                <p>
+                    一起聊聊天，享受美好時光
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-time">
+                12:00
+            </div>
+
+            <div class="timeline-line"></div>
+
+            <div class="timeline-content">
+
+                <h3>
+                    💍 婚禮開始
+                </h3>
+
+                <p>
+                    準備上菜囉！
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Venue -->
+
+    <div class="venue-card">
+
+        <div class="venue-name">
+            📍 養心茶樓 松江店
+        </div>
+
+        <div class="venue-address">
+            台北市中山區松江路128號 B1
+        </div>
+
+        <a
+            href="https://maps.app.goo.gl/XXXXXXXX"
+            target="_blank"
+            class="map-btn">
+
+            查看 Google Map
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+COUNTDOWN + RSVP
+=========================== -->
+<section class="countdown">
+<div class="countdown-divider"></div>
+<div class="countdown-tag">SEE YOU SOON</div>
+<div class="countdown-divider"></div>
+<div class="countdown-text">還有</div>
+<div class="countdown-days">
+<span id="days">0</span>
+<span class="days-text">DAYS</span>
+</div>
+<div class="rsvp-photo">
+<img src="images/rsvp.jpg" alt="RSVP">
+</div>
+<div class="rsvp-note">
+請於 2026.09.09 前填寫回覆，以方便座位安排，謝謝您
+</div>
+<a href="你的Google表單連結" target="_blank" class="rsvp-btn">
+我要回覆
+</a>
+</section>
+
+<!-- ===========================
+     THANK YOU
+=========================== -->
+
+<section class="thankyou">
+
+    <div class="thankyou-divider"></div>
+
+    <div class="thankyou-tag">
+        THANK YOU
+    </div>
+
+    <div class="thankyou-divider"></div>
+
+    <div class="thankyou-text">
+
+        <p>因為有您</p>
+
+        <p>幸福，更加完整</p>
+
+    </div>
+
+    <div class="thankyou-photo">
+
+        <img src="images/thank-you.jpg" alt="Thank You">
+
+    </div>
+
+</section>
