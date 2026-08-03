@@ -1200,7 +1200,11 @@ p{
 
 .wedding-date{
 
-    font-size:56px;
+    font-size:clamp(40px,11vw,52px);
+
+    line-height:1.15;
+
+    word-break:keep-all;
 
 }
 
@@ -1232,7 +1236,7 @@ p{
 
 .timeline-item{
 
-    grid-template-columns:75px 24px 1fr;
+    grid-template-columns:60px 16px 1fr;
 
     padding:22px 0;
 
@@ -1240,9 +1244,9 @@ p{
 
 .timeline-time{
 
-    font-size:28px;
+    font-size:20px;
 
-    padding-right:12px;
+    padding-right:10px;
 
 }
 
@@ -1262,13 +1266,15 @@ p{
 
 .timeline-content h3{
 
-    font-size:24px;
+    font-size:18px;
+
+    line-height:1.4;
 
 }
 
 .timeline-content p{
 
-    font-size:16px;
+    font-size:15px;
 
     line-height:1.7;
 
@@ -1284,7 +1290,9 @@ p{
 
 .venue-name{
 
-    font-size:28px;
+    font-size:22px;
+
+    line-height:1.5;
 
 }
 
