@@ -68,7 +68,7 @@ window.addEventListener("mousedown", stopAutoScroll);
 
 // 等待 3 秒開始
 
-setTimeout(startScroll, 5000);
+setTimeout(startScroll, 9000);
 
 
 function startScroll() {

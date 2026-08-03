@@ -1356,7 +1356,7 @@ p{
 
     background:#F7F3EC;
 
-    padding:70px 20px 80px;
+    padding:70px 20px 35px;
 
     text-align:center;
 
@@ -1606,7 +1606,7 @@ p{
 
     background:#F7F3EC;
 
-    padding:60px 20px 0;
+    padding:35px 20px 0;
 
     text-align:center;
 
@@ -1614,21 +1614,25 @@ p{
 
 .thankyou-divider{
 
-    width:60px;
+    width:70px;
 
     height:1px;
 
-    background:#C9A97D;
+    background:#C8A57C;
 
-    margin:0 auto 14px;
+    margin:0 auto;
 
 }
 
 .thankyou-tag{
 
-    font-size:14px;
+    display:block;
 
-    letter-spacing:5px;
+    margin:16px auto;
+
+    font-size:15px;
+
+    letter-spacing:8px;
 
     color:#B6976A;
 
@@ -1636,7 +1640,7 @@ p{
 
 .thankyou-text{
 
-    margin:30px 0 32px;
+    margin:22px 0 42px;
 
 }
 
@@ -1682,7 +1686,7 @@ p{
 
     width:100%;
 
-    max-width:560px;
+    max-width:640px;
 
     height:auto;
 
@@ -1691,7 +1695,7 @@ p{
 
 .thankyou{
 
-    padding:55px 20px 0;
+    padding:40px 20px 90;
 
 }
 
@@ -1705,7 +1709,7 @@ p{
 
     font-size:12px;
 
-    letter-spacing:5px;
+    letter-spacing:8px;
 
 }
 
@@ -1823,8 +1827,6 @@ p{
 
 @media(max-width:768px){
 
-@media(max-width:768px){
-
 .music-btn{
 
     width:38px;
@@ -1834,10 +1836,6 @@ p{
     top:14px;
 
     right:14px;
-
-    font-size:20px;
-
-}
 
 }
 
