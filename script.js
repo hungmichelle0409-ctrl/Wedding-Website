@@ -41,66 +41,6 @@ setInterval(updateCountdown, 60000);
 
 
 // ==========================
-// 自動捲動
-// ==========================
-
-let autoScroll = true;
-
-const sections = document.querySelectorAll("section");
-
-let currentSection = 0;
-
-
-// 使用者操作就停止
-
-function stopAutoScroll() {
-
-    autoScroll = false;
-
-}
-
-window.addEventListener("wheel", stopAutoScroll, { passive: true });
-
-window.addEventListener("touchstart", stopAutoScroll, { passive: true });
-
-window.addEventListener("mousedown", stopAutoScroll);
-
-
-// 等待 3 秒開始
-
-setTimeout(startScroll, 9000);
-
-
-function startScroll() {
-
-    if (!autoScroll) return;
-
-    scrollNext();
-
-}
-
-
-function scrollNext() {
-
-    if (!autoScroll) return;
-
-    currentSection++;
-
-    if (currentSection >= sections.length) return;
-
-    sections[currentSection].scrollIntoView({
-
-        behavior: "smooth",
-
-        block: "start"
-
-    });
-
-    setTimeout(scrollNext, 9000);
-
-}
-
-// ==========================
 // Hero Animation
 // ==========================
 
@@ -110,8 +50,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
     heroItems.forEach((item, index) => {
 
-        item.style.animation = "fadeUp 2.4s ease-out forwards";
-        item.style.animationDelay = `${0.4 + index * 0.3}s`;
+        item.style.animation = "fadeUp .8s ease-out forwards";
+        item.style.animationDelay = `${0.15 + index * 0.12}s`;
 
     });
 
