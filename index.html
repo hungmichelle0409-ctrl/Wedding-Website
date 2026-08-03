@@ -10,22 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://share.google/tovKnfZ9bGQJ9keoD" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
-<!-- Background Music -->
-<audio id="bgMusic" loop preload="auto">
+<body>
+
+<audio id="bgMusic" loop preload="metadata">
     <source src="music/background.mp3" type="audio/mpeg">
 </audio>
 
-<!-- Music Button -->
 <button id="musicBtn" class="music-btn" aria-label="背景音樂">
-    🎵
+    ♪
 </button>
-
-<body>
 
 <header class="hero">
 
@@ -37,7 +35,6 @@
             class="desktop"
             alt="Wedding Cover"
             fetchpriority="high"
-            loading="eager"
             decoding="async">
 
         <!-- Mobile Cover -->
@@ -46,7 +43,6 @@
             class="mobile"
             alt="Wedding Cover"
             fetchpriority="high"
-            loading="eager"
             decoding="async">
 
     </div>
@@ -83,7 +79,7 @@
 
         <div class="hero-love hero-fade">
 
-            Love, Gathered.
+            Love, Gathered
 
         </div>
 
@@ -105,8 +101,10 @@
     <div class="opening-bg">
 
         <img
-            src="images/opening.jpg"
-            alt="Wedding Opening">
+        src="images/opening.jpg"
+        alt="Wedding Opening"
+        loading="lazy"
+        decoding="async">
 
     </div>
 
@@ -134,7 +132,7 @@
 
     <div class="story-content">
 
-        <span class="section-tag">
+        <div class="section-tag">
             OUR BEGINNING
         </span>
 
@@ -158,15 +156,18 @@
         </p>
 
         <div class="story-love">
-            Love, Gathered.
+            Love, Gathered
         </div>
 
     </div>
 
     <div class="story-image">
 
-        <img src="images/story.jpg"
-             alt="story">
+        <img
+        src="images/story.jpg"
+        alt="Story"
+        loading="lazy"
+        decoding="async">
 
     </div>
 
@@ -194,8 +195,11 @@
     <!-- Photo -->
     <div class="wedding-photo">
 
-        <img src="images/wedding-day.jpg"
-             alt="Wedding Photo">
+        <img
+        src="images/wedding-day.jpg"
+        alt="Wedding"
+        loading="lazy"
+        decoding="async">
 
     </div>
 
@@ -287,12 +291,18 @@ COUNTDOWN + RSVP
 <span class="days-text">DAYS</span>
 </div>
 <div class="rsvp-photo">
-<img src="images/rsvp.jpg" alt="RSVP">
+<img
+src="images/rsvp.jpg"
+alt="RSVP"
+loading="lazy"
+decoding="async">
 </div>
 <div class="rsvp-note">
-請於 2026.09.09 前填寫回覆，以方便座位安排，謝謝您
+請於 2026.09.09 前完成回覆<br><br>
+以方便座位安排<br>
+謝謝您
 </div>
-<a href="你的Google表單連結" target="_blank" class="rsvp-btn">
+<a href="https://forms.gle/j4CADW6U5NRUHz796" target="_blank" class="rsvp-btn">
 我要回覆
 </a>
 </section>
@@ -321,7 +331,11 @@ COUNTDOWN + RSVP
 
     <div class="thankyou-photo">
 
-        <img src="images/thank-you.jpg" alt="Thank You">
+        <img
+        src="images/thank-you.jpg"
+        alt="Thank You"
+        loading="lazy"
+        decoding="async">
 
     </div>
 

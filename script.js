@@ -3,6 +3,11 @@
 // ==========================
 
 const weddingDate = new Date("2026-10-11T11:30:00");
+const preloadDesktop = new Image();
+preloadDesktop.src = "images/cover-desktop.jpg";
+
+const preloadMobile = new Image();
+preloadMobile.src = "images/cover-mobile.jpg";
 
 const daysElement = document.getElementById("days");
 
@@ -63,7 +68,7 @@ window.addEventListener("mousedown", stopAutoScroll);
 
 // 等待 3 秒開始
 
-setTimeout(startScroll, 3000);
+setTimeout(startScroll, 5000);
 
 
 function startScroll() {
@@ -91,7 +96,7 @@ function scrollNext() {
 
     });
 
-    setTimeout(scrollNext, 5000);
+    setTimeout(scrollNext, 9000);
 
 }
 
@@ -99,7 +104,7 @@ function scrollNext() {
 // Hero Animation
 // ==========================
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
 
     const heroItems = document.querySelectorAll(".hero-fade");
 
@@ -152,9 +157,10 @@ const music = document.getElementById("bgMusic");
 const musicBtn = document.getElementById("musicBtn");
 
 let isPlaying = false;
+let userPaused = false;
 
 // 嘗試自動播放
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
 
     const playPromise = music.play();
 
@@ -182,6 +188,7 @@ musicBtn.addEventListener("click", () => {
     if (isPlaying) {
 
         music.pause();
+        userPaused = true;
 
         musicBtn.classList.remove("playing");
         musicBtn.classList.add("pause");
@@ -191,6 +198,7 @@ musicBtn.addEventListener("click", () => {
     } else {
 
         music.play();
+        userPaused = false;
 
         musicBtn.classList.remove("pause");
         musicBtn.classList.add("playing");
@@ -203,19 +211,54 @@ musicBtn.addEventListener("click", () => {
 
 // 如果瀏覽器阻擋自動播放
 // 第一次點擊畫面自動開始
-document.addEventListener("click", () => {
+document.addEventListener(
+
+"pointerdown",
+
+() => {
 
     if (!isPlaying) {
 
-        music.play().then(() => {
+        music.play().then(()=>{
 
             musicBtn.classList.remove("pause");
             musicBtn.classList.add("playing");
 
             isPlaying = true;
 
-        }).catch(() => {});
+            userPaused = false;
+
+        }).catch(()=>{});
 
     }
 
-}, { once: true });
+},
+
+{ once:true }
+
+);
+// ==========================
+// 背景切換
+// ==========================
+
+document.addEventListener("visibilitychange", () => {
+
+    if (document.hidden) {
+
+        if (isPlaying) {
+
+            music.pause();
+
+        }
+
+    } else {
+
+        if (isPlaying && !userPaused) {
+
+            music.play().catch(()=>{});
+
+        }
+
+    }
+
+});

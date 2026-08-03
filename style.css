@@ -115,37 +115,42 @@ p{
     width:100%;
     height:100%;
     object-fit:cover;
-    display:block;
 }
 
 .hero-bg .desktop{
     display:block;
-    object-position:center center;
 }
 
 .hero-bg .mobile{
     display:none;
-    object-position:center center;
 }
 
 .hero-overlay{
     position:absolute;
     inset:0;
     z-index:2;
-    background:linear-gradient(
+
+    background:
+    linear-gradient(
         to bottom,
-        rgba(0,0,0,.08),
+        rgba(0,0,0,.10),
         rgba(0,0,0,.18),
-        rgba(0,0,0,.45)
+        rgba(0,0,0,.42)
     );
 }
 
 .hero-content{
+
     position:absolute;
+
     left:8%;
-    bottom:10%;
-    z-index:3;
-    max-width:680px;
+
+    bottom:11%;
+
+    z-index:5;
+
+    max-width:700px;
+
 }
 
 .hero-date,
@@ -153,52 +158,63 @@ p{
 .hero-couple,
 .hero-love{
 
-    opacity:0;
-    transform:translateY(8px);
+    opacity:1;
 
 }
 
 .hero-date{
 
-    margin-bottom:32px;
     color:#E6D3AE;
-    font-size:18px;
-    letter-spacing:8px;
+
+    font-size:16px;
+
+    letter-spacing:6px;
+
+    margin-bottom:26px;
 
 }
 
 .hero-title{
 
     display:flex;
+
     flex-direction:column;
-    gap:8px;
+
+    gap:6px;
 
 }
 
 .hero-title span{
 
     display:block;
+
     color:#fff;
-    font-size:84px;
-    font-weight:400;
+
+    font-size:clamp(48px,6vw,82px);
+
     line-height:1.18;
-    text-shadow:0 8px 18px rgba(0,0,0,.35);
+
+    font-weight:400;
+
+    text-shadow:0 8px 28px rgba(0,0,0,.55);
 
 }
 
 .hero-couple{
 
     display:flex;
-    align-items:center;
-    gap:22px;
 
-    margin-top:56px;
+    align-items:center;
+
+    gap:18px;
+
+    margin-top:46px;
 
     color:#fff;
 
-    font-size:26px;
+    font-size:24px;
 
-    letter-spacing:5px;
+    letter-spacing:4px;
 
 }
 
@@ -212,15 +228,17 @@ p{
 
 .hero-love{
 
-    margin-top:28px;
+    margin-top:22px;
 
-    color:#E6D3AE;
+    font-size:22px;
 
     font-family:"Cormorant Garamond",serif;
 
-    font-size:28px;
-
     font-style:italic;
+
+    color:#E6D3AE;
+
+    opacity:.9;
 
 }
 
@@ -230,11 +248,11 @@ p{
 
     left:50%;
 
-    bottom:28px;
+    bottom:24px;
 
     transform:translateX(-50%);
 
-    z-index:5;
+    z-index:8;
 
     display:flex;
 
@@ -242,11 +260,9 @@ p{
 
     align-items:center;
 
-    color:#ffffff;
+    opacity:.7;
 
-    opacity:.75;
-
-    animation:scrollFloat 2.5s infinite;
+    animation:scrollFloat 3.6s ease-in-out infinite;
 
 }
 
@@ -254,11 +270,11 @@ p{
 
     width:1px;
 
-    height:42px;
+    height:38px;
 
-    background:#ffffff;
+    background:#fff;
 
-    margin-bottom:12px;
+    margin-bottom:10px;
 
 }
 
@@ -266,9 +282,9 @@ p{
 
     margin:0;
 
-    font-size:11px;
+    color:#fff;
 
-    color:#ffffff;
+    font-size:10px;
 
     letter-spacing:4px;
 
@@ -277,20 +293,26 @@ p{
 @keyframes scrollFloat{
 
     0%{
+
         transform:translate(-50%,0);
+
     }
 
     50%{
-        transform:translate(-50%,10px);
+
+        transform:translate(-50%,8px);
+
     }
 
     100%{
+
         transform:translate(-50%,0);
+
     }
 
 }
 
-@media (max-width:900px){
+@media(max-width:900px){
 
 .hero{
 
@@ -312,25 +334,23 @@ p{
 
 .hero-content{
 
-    left:30px;
+    left:28px;
 
-    right:30px;
+    right:28px;
 
     top:72px;
 
     bottom:auto;
 
-    max-width:380px;
-
 }
 
 .hero-date{
 
-    font-size:14px;
+    font-size:13px;
 
     letter-spacing:4px;
 
-    margin-bottom:18px;
+    margin-bottom:16px;
 
 }
 
@@ -344,40 +364,46 @@ p{
 
 .hero-couple{
 
-    margin-top:48px;
+    margin-top:36px;
 
-    gap:16px;
+    font-size:18px;
 
-    font-size:20px;
+    gap:12px;
 
 }
 
 .hero-love{
 
-    margin-top:28px;
+    font-size:17px;
 
-    font-size:18px;
+    margin-top:18px;
 
 }
 
 .scroll-indicator{
 
-    bottom:20px;
+    bottom:18px;
 
 }
 
 }
 
-@keyframes fadeUp {
+@keyframes fadeUp{
 
-    from {
-        opacity: 0;
-        transform: translateY(8px);
+    from{
+
+        opacity:0;
+
+        filter:blur(10px);
+
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    to{
+
+        opacity:1;
+
+        filter:blur(0);
+
     }
 
 }
@@ -600,30 +626,33 @@ p{
 .story{
 
     display:grid;
-    grid-template-columns:46% 54%;
-    min-height:900px;
+    grid-template-columns:48% 52%;
+    min-height:760px;
 
     background:#F8F5F0;
+
     overflow:hidden;
 
 }
 
-/* 左邊文字 */
-
 .story-content{
 
     display:flex;
+
     flex-direction:column;
+
     justify-content:center;
 
-    padding:0 6vw;
+    padding:80px 6vw;
 
 }
 
 .story .section-tag{
 
-    font-size:17px;
-    letter-spacing:6px;
+    font-size:15px;
+
+    letter-spacing:5px;
+
     color:#B08D69;
 
     margin-bottom:18px;
@@ -636,51 +665,57 @@ p{
 
     display:block;
 
-    width:70px;
+    width:60px;
+
     height:1px;
 
-    margin-top:16px;
-
     background:#B08D69;
+
+    margin-top:14px;
 
 }
 
 .story h2{
 
-    font-size:72px;
-    line-height:1.4;
+    font-size:60px;
+
+    line-height:1.35;
+
     font-weight:400;
 
     color:#2F2F2F;
 
-    margin:50px 0;
+    margin:36px 0;
 
 }
 
 .story p{
 
-    font-size:30px;
-    line-height:2;
+    font-size:24px;
 
-    color:#555;
+    line-height:1.9;
 
-    margin-bottom:28px;
+    color:#666;
+
+    margin-bottom:18px;
 
 }
 
 .story-love{
 
-    margin-top:60px;
+    margin-top:34px;
 
-    font-size:42px;
+    font-size:26px;
+
+    font-family:"Cormorant Garamond",serif;
 
     color:#B08D69;
 
     font-style:italic;
 
-}
+    opacity:.85;
 
-/* 右邊照片 */
+}
 
 .story-image{
 
@@ -693,17 +728,16 @@ p{
 .story-image img{
 
     width:100%;
+
     height:100%;
 
     object-fit:cover;
 
-    object-position:65% center;
+    object-position:62% center;
 
-    transform:scale(1.08);
+    transform:scale(1.05);
 
 }
-
-/* 桌機左側淡化 */
 
 .story-image::before{
 
@@ -712,25 +746,28 @@ p{
     position:absolute;
 
     left:0;
+
     top:0;
 
-    width:24%;
+    width:18%;
+
     height:100%;
 
     background:linear-gradient(
+
         to right,
+
         #F8F5F0,
-        rgba(248,245,240,.8),
+
+        rgba(248,245,240,.7),
+
         transparent
+
     );
 
     z-index:2;
 
 }
-
-/* ===========================
-   手機
-=========================== */
 
 @media(max-width:900px){
 
@@ -739,6 +776,92 @@ p{
     display:flex;
 
     flex-direction:column;
+
+}
+
+.story-image{
+
+    order:-1;
+
+    height:42vh;
+
+}
+
+.story-image img{
+
+    object-position:center 28%;
+
+    transform:scale(1.02);
+
+}
+
+.story-image::before{
+
+    width:100%;
+
+    height:16%;
+
+    left:0;
+
+    top:auto;
+
+    bottom:0;
+
+    background:linear-gradient(
+
+        to bottom,
+
+        transparent,
+
+        rgba(248,245,240,.6),
+
+        #F8F5F0
+
+    );
+
+}
+
+.story-content{
+
+    padding:46px 32px 56px;
+
+}
+
+.story .section-tag{
+
+    font-size:13px;
+
+    letter-spacing:4px;
+
+}
+
+.story h2{
+
+    font-size:38px;
+
+    line-height:1.45;
+
+    margin:24px 0;
+
+}
+
+.story p{
+
+    font-size:18px;
+
+    line-height:1.85;
+
+    margin-bottom:16px;
+
+}
+
+.story-love{
+
+    font-size:22px;
+
+    margin-top:28px;
+
+}
 
 }
 
@@ -844,7 +967,7 @@ p{
 
     background:#F7F3EC;
 
-    padding:90px 20px 110px;
+    padding:70px 20px 90px;
 
     text-align:center;
 
@@ -894,9 +1017,9 @@ p{
 
 .wedding-photo{
 
-    width:min(900px,100%);
+    width:min(880px,100%);
 
-    margin:55px auto;
+    margin:40px auto;
 
 }
 
@@ -918,9 +1041,9 @@ p{
 
 .timeline{
 
-    max-width:720px;
+    max-width:680px;
 
-    margin:0 auto 60px;
+    margin:0 auto 40px;
 
     text-align:left;
 
@@ -934,7 +1057,7 @@ p{
 
     align-items:flex-start;
 
-    padding:28px 0;
+    padding:22px 0;
 
 }
 
@@ -946,7 +1069,7 @@ p{
 
 .timeline-time{
 
-    font-size:40px;
+    font-size:34px;
 
     color:#8C6D49;
 
@@ -1038,7 +1161,7 @@ p{
 
     border-radius:30px;
 
-    padding:45px 40px;
+    padding:34px 34px;
 
     box-shadow:0 15px 35px rgba(0,0,0,.08);
 
@@ -1046,7 +1169,7 @@ p{
 
 .venue-name{
 
-    font-size:38px;
+    font-size:32px;
 
     color:#2F2F2F;
 
@@ -1058,7 +1181,7 @@ p{
 
     margin-top:18px;
 
-    font-size:22px;
+    font-size:18px;
 
     color:#7A7A7A;
 
@@ -1070,7 +1193,7 @@ p{
 
     display:inline-block;
 
-    margin-top:35px;
+    margin-top:24px;
 
     padding:16px 44px;
 
@@ -1118,7 +1241,7 @@ p{
 
 .wedding-date{
 
-    font-size:52px;
+    font-size:56px;
 
 }
 
@@ -1233,7 +1356,7 @@ p{
 
     background:#F7F3EC;
 
-    padding:100px 20px;
+    padding:70px 20px 80px;
 
     text-align:center;
 
@@ -1241,21 +1364,21 @@ p{
 
 .countdown-divider{
 
-    width:70px;
+    width:60px;
 
     height:1px;
 
     background:#C9A97D;
 
-    margin:0 auto 18px;
+    margin:0 auto 14px;
 
 }
 
 .countdown-tag{
 
-    font-size:15px;
+    font-size:14px;
 
-    letter-spacing:6px;
+    letter-spacing:5px;
 
     color:#B6976A;
 
@@ -1263,11 +1386,11 @@ p{
 
 .countdown-text{
 
-    margin-top:28px;
+    margin-top:18px;
 
-    font-size:24px;
+    font-size:20px;
 
-    color:#777777;
+    color:#777;
 
 }
 
@@ -1279,15 +1402,15 @@ p{
 
     align-items:flex-end;
 
-    gap:14px;
+    gap:12px;
 
-    margin:12px 0 50px;
+    margin:8px 0 34px;
 
 }
 
 .countdown-days #days{
 
-    font-size:88px;
+    font-size:76px;
 
     font-weight:500;
 
@@ -1299,21 +1422,21 @@ p{
 
 .days-text{
 
-    font-size:22px;
+    font-size:18px;
 
-    letter-spacing:4px;
+    letter-spacing:3px;
 
     color:#A7865B;
 
-    padding-bottom:10px;
+    padding-bottom:8px;
 
 }
 
 .rsvp-photo{
 
-    width:min(900px,100%);
+    width:min(860px,100%);
 
-    margin:0 auto 40px;
+    margin:0 auto 28px;
 
 }
 
@@ -1323,9 +1446,9 @@ p{
 
     display:block;
 
-    border-radius:30px;
+    border-radius:26px;
 
-    box-shadow:0 18px 40px rgba(0,0,0,.10);
+    box-shadow:0 16px 34px rgba(0,0,0,.08);
 
 }
 
@@ -1333,11 +1456,11 @@ p{
 
     font-size:17px;
 
-    color:#777777;
+    color:#777;
 
-    line-height:1.8;
+    line-height:2;
 
-    margin-bottom:34px;
+    margin-bottom:28px;
 
 }
 
@@ -1349,29 +1472,25 @@ p{
 
     align-items:center;
 
-    min-width:280px;
+    min-width:260px;
 
-    height:62px;
+    height:58px;
 
-    padding:0 42px;
+    padding:0 40px;
 
     border-radius:999px;
 
     background:#C8A57C;
 
-    color:#FFFFFF;
+    color:#fff;
 
-    text-decoration:none;
-
-    font-size:22px;
-
-    font-weight:500;
+    font-size:20px;
 
     letter-spacing:2px;
 
-    transition:.3s;
+    transition:.35s;
 
-    box-shadow:0 10px 24px rgba(0,0,0,.12);
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
 
 }
 
@@ -1393,7 +1512,7 @@ p{
 
 .countdown{
 
-    padding:80px 22px;
+    padding:60px 20px 70px;
 
 }
 
@@ -1423,15 +1542,13 @@ p{
 
 .countdown-days{
 
-    gap:10px;
-
-    margin:10px 0 40px;
+    margin:8px 0 28px;
 
 }
 
 .countdown-days #days{
 
-    font-size:64px;
+    font-size:56px;
 
 }
 
@@ -1447,7 +1564,7 @@ p{
 
 .rsvp-photo{
 
-    margin:0 auto 30px;
+    margin:0 auto 24px;
 
 }
 
@@ -1471,15 +1588,11 @@ p{
 
     width:100%;
 
-    max-width:300px;
+    max-width:280px;
 
-    min-width:auto;
+    height:54px;
 
-    height:58px;
-
-    padding:0;
-
-    font-size:20px;
+    font-size:18px;
 
 }
 
@@ -1493,7 +1606,7 @@ p{
 
     background:#F7F3EC;
 
-    padding:90px 20px 0;
+    padding:60px 20px 0;
 
     text-align:center;
 
@@ -1501,21 +1614,21 @@ p{
 
 .thankyou-divider{
 
-    width:70px;
+    width:60px;
 
     height:1px;
 
     background:#C9A97D;
 
-    margin:0 auto 18px;
+    margin:0 auto 14px;
 
 }
 
 .thankyou-tag{
 
-    font-size:15px;
+    font-size:14px;
 
-    letter-spacing:6px;
+    letter-spacing:5px;
 
     color:#B6976A;
 
@@ -1523,7 +1636,7 @@ p{
 
 .thankyou-text{
 
-    margin:42px 0 45px;
+    margin:30px 0 32px;
 
 }
 
@@ -1539,17 +1652,17 @@ p{
 
 .thankyou-text p:first-child{
 
-    font-size:28px;
+    font-size:26px;
 
     font-weight:500;
 
-    margin-bottom:12px;
+    margin-bottom:10px;
 
 }
 
 .thankyou-text p:last-child{
 
-    font-size:22px;
+    font-size:20px;
 
     color:#7A7A7A;
 
@@ -1569,7 +1682,7 @@ p{
 
     width:100%;
 
-    max-width:500px;
+    max-width:560px;
 
     height:auto;
 
@@ -1578,7 +1691,7 @@ p{
 
 .thankyou{
 
-    padding:70px 20px 0;
+    padding:55px 20px 0;
 
 }
 
@@ -1598,29 +1711,30 @@ p{
 
 .thankyou-text{
 
-    margin:34px 0 36px;
+    margin:28px 0 28px;
 
 }
 
 .thankyou-text p:first-child{
 
-    font-size:24px;
+    font-size:22px;
 
 }
 
 .thankyou-text p:last-child{
 
-    font-size:18px;
+    font-size:17px;
 
 }
 
 .thankyou-photo img{
 
-    max-width:88%;
+    max-width:92%;
 
 }
 
 }
+
 /* ===========================
    MUSIC
 =========================== */
@@ -1629,33 +1743,59 @@ p{
 
     position:fixed;
 
-    top:24px;
+    top:20px;
 
-    right:28px;
+    right:20px;
 
-    z-index:9999;
+    width:42px;
 
-    background:none;
+    height:42px;
 
     border:none;
 
-    font-size:30px;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+    color:#B6976A;
+
+    font-size:24px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 
     cursor:pointer;
 
-    color:#C8A57C;
+    z-index:9999;
 
     transition:.3s;
-
-    user-select:none;
 
 }
 
 .music-btn:hover{
 
-    transform:scale(1.12);
+    transform:scale(1.08);
 
-    color:#B48E63;
+    background:rgba(255,255,255,.9);
+
+}
+
+.music-btn img{
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:50%;
+
+    pointer-events:none;
 
 }
 
@@ -1665,13 +1805,7 @@ p{
 
 }
 
-.music-btn.playing{
-
-    animation:musicRotate 6s linear infinite;
-
-}
-
-@keyframes musicRotate{
+@keyframes cdRotate{
 
     from{
 
@@ -1689,13 +1823,29 @@ p{
 
 @media(max-width:768px){
 
+@media(max-width:768px){
+
 .music-btn{
 
-    top:18px;
+    width:38px;
 
-    right:18px;
+    height:38px;
 
-    font-size:26px;
+    top:14px;
+
+    right:14px;
+
+    font-size:20px;
+
+}
+
+}
+
+.music-btn img{
+
+    width:34px;
+
+    height:34px;
 
 }
 
