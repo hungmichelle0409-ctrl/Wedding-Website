@@ -399,7 +399,7 @@ p{
 
     right:28px;
 
-    top:72px;
+    top:calc(env(safe-area-inset-top) + 40px);
 
     bottom:auto;
 
@@ -417,27 +417,25 @@ p{
 
 .hero-title span{
 
-    font-size:42px;
+    font-size:clamp(34px,8vw,42px);
 
-    line-height:1.25;
+    line-height:1.18;
 
 }
 
 .hero-couple{
 
-    margin-top:36px;
+    margin-top:28px;
 
-    font-size:18px;
-
-    gap:12px;
+    font-size:17px;
 
 }
 
 .hero-love{
 
-    font-size:17px;
+    margin-top:14px;
 
-    margin-top:18px;
+    font-size:16px;
 
 }
 
