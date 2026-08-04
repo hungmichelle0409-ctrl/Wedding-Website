@@ -1147,17 +1147,27 @@ p{
 
 .timeline-item{
 
-    grid-template-columns:60px 16px 1fr;
+    grid-template-columns:58px 16px 1fr;
 
-    padding:22px 0;
+    align-items:flex-start;
+
+    column-gap:10px;
+
+    padding:18px 0;
 
 }
 
 .timeline-time{
 
-    font-size:20px;
+    font-size:18px;
 
-    padding-right:10px;
+    line-height:1.2;
+
+    text-align:right;
+
+    padding-right:6px;
+
+    white-space:nowrap;
 
 }
 
@@ -1171,7 +1181,9 @@ p{
 
 .timeline-content{
 
-    padding-left:18px;
+    padding-left:10px;
+
+    min-width:0;
 
 }
 
@@ -1180,6 +1192,8 @@ p{
     font-size:18px;
 
     line-height:1.4;
+
+    white-space:nowrap;
 
 }
 
