@@ -1629,9 +1629,9 @@ p{
 
     right:18px;
 
-    width:30px;
+    width:34px;
 
-    height:30px;
+    height:34px;
 
     display:flex;
 
@@ -1641,33 +1641,35 @@ p{
 
     border:none;
 
-    background:transparent;
+    background:rgba(255,255,255,.55);
 
-    box-shadow:none;
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    border-radius:50%;
 
     cursor:pointer;
 
-    color:#f6f4f2;
+    color:#B89468;
 
-    font-size:18px;
+    font-size:22px;
 
-    font-weight:300;
+    font-weight:600;
 
     line-height:1;
 
-    opacity:.65;
+    opacity:1;
 
-    z-index:9999;
+    z-index:999999;
 
-    transition:all .25s ease;
+    transition:.25s;
 
-    -webkit-tap-highlight-color:transparent;
+    box-shadow:0 4px 16px rgba(0,0,0,.08);
 
 }
 
 .music-btn:hover{
-
-    opacity:.95;
 
     transform:scale(1.08);
 
@@ -1676,7 +1678,7 @@ p{
 
 .music-btn.pause{
 
-    opacity:.22;
+    opacity:.45;
 
 }
 
