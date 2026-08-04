@@ -4,10 +4,10 @@
 
 const weddingDate = new Date("2026-10-11T11:30:00");
 const preloadDesktop = new Image();
-preloadDesktop.src = "images/cover-desktop.jpg";
+preloadDesktop.src = "images/cover-desktop.webp";
 
 const preloadMobile = new Image();
-preloadMobile.src = "images/cover-mobile.jpg";
+preloadMobile.src = "images/cover-mobile.webp";
 
 const daysElement = document.getElementById("days");
 
