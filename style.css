@@ -9,7 +9,13 @@
 }
 
 html{
+
     scroll-behavior:smooth;
+
+    -webkit-text-size-adjust:100%;
+
+    text-size-adjust:100%;
+
 }
 
 body{
@@ -722,7 +728,9 @@ p{
 
 .story-content{
 
-    max-width:760px;
+    max-width:720px;
+
+    width:100%;
 
     margin:0 auto;
 
@@ -798,19 +806,17 @@ p{
 
 .story-content h2{
 
-    font-size:30px;
-
-    line-height:1.45;
-
-    margin-bottom:24px;
+    font-size:clamp(28px,7vw,34px);
 
 }
 
 .story-content p{
 
-    font-size:16px;
+    font-size:15px;
 
     line-height:1.9;
+
+    word-break:keep-all;
 
 }
 
