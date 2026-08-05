@@ -1262,17 +1262,21 @@ p{
 
     background:#C9A97D;
 
-    margin:0 auto 14px;
+    margin:0 auto;
 
 }
 
 .countdown-tag{
+
+    display:inline-block;
 
     font-size:14px;
 
     letter-spacing:5px;
 
     color:#B6976A;
+
+    margin:14px 0;
 
 }
 
