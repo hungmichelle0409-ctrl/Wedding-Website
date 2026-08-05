@@ -23,11 +23,15 @@ function updateCountdown() {
 
     if (distance <= 0) {
 
-        daysElement.textContent = "0";
+    document.querySelector(".countdown-text").textContent = "💍";
 
-        return;
+    daysElement.textContent = "TODAY";
 
-    }
+    document.querySelector(".days-text").textContent = "";
+
+    return;
+
+}
 
     const days = Math.ceil(distance / (1000 * 60 * 60 * 24));
 
