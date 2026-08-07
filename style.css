@@ -1370,15 +1370,15 @@ p{
 
 .rsvp-hint{
 
-    margin:18px 0 26px;
+    margin:18px 0 24px;
+
+    text-align:center;
 
     font-size:15px;
 
     letter-spacing:1px;
 
     color:#B6976A;
-
-    text-align:center;
 
     font-weight:500;
 
@@ -1506,7 +1506,7 @@ p{
 
 .rsvp-hint{
 
-    margin:16px 0 24px;
+    margin:16px 0 22px;
 
     font-size:14px;
 
